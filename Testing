@@ -1,0 +1,32 @@
+local keys = {
+    "2380359379",
+    "4784225045",
+}
+
+local counter = 1
+
+for i,v in pairs(keys) do
+    if counter == #keys then
+        --Not Whitelisted!
+        keys = ""
+        game.Players.LocalPlayer:Kick("Not A Valid Key!")
+    else
+        if v == _G.Key then
+            --Whitelisted!
+            print("Successfully Whitelisted")
+            keyCheck = _G.Key
+            keys = ""
+        else
+            counter = counter +1
+        end
+    end
+end
+
+while true do
+    if _G.Key == keyCheck then
+        --Not Spoofed
+    else
+        game.Players.LocalPlayer:Kick("Incorrect Key! If you need help contact v6#0025")
+    end 
+    wait()
+end
