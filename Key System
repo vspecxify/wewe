@@ -26,7 +26,7 @@ while true do
     if _G.Key == keyCheck then
         --Not Spoofed
     else
-        game.Players.LocalPlayer:Kick("Incorrect Key! If you need help contact v6#0025")
+        game.Players.LocalPlayer:Kick("Incorrect Key!")
     end 
     wait()
 end
